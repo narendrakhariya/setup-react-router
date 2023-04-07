@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
+import RootLayout from "./pages/RootLayout/RootLayout";
 
 // 2nd approch old style
 // const routerDefination = createRoutesFromElements(
@@ -19,8 +20,15 @@ import Products from "./pages/Products/Products";
 
 // 1st approch new style
 const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/products", element: <Products /> },
+  // RootLayout to wrap as parent and childs approch
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/products", element: <Products /> },
+    ],
+  },
 ]);
 
 function App() {
