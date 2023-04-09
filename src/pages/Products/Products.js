@@ -24,10 +24,10 @@ const Products = () => {
           return (
             <li key={item.id}>
               {/* Absolute path */}
-              {/* <Link to={`/products/${item.id}`}>{item.title}</Link> */}
+              <Link to={`/products/${item.id}`}>{item.title}</Link>
 
               {/* Relative path */}
-              <Link to={item.id}>{item.title}</Link>
+              {/* <Link to={item.id}>{item.title}</Link> */}
             </li>
           );
         })}
