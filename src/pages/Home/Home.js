@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  /* Navigating Programmatically  */
+  const navigate = useNavigate();
+
+  const navigateHandler = () => {
+    navigate("/products");
+  };
   return (
     <>
       <h3>My home page</h3>
@@ -11,6 +17,11 @@ const Home = () => {
 
         {/* Use link insted */}
         <Link to="/products"> The list of products</Link>
+
+        <p>
+          {/* Navigating Programmatically  */}
+          <button onClick={navigateHandler}>Navigate To Products</button>
+        </p>
       </p>
     </>
   );
