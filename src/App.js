@@ -21,16 +21,31 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 // const router = createBrowserRouter(routerDefination);
 
 // 1st approch new style
+// const router = createBrowserRouter([
+//   // RootLayout to wrap as parent and childs approch
+//   {
+//     path: "/",
+//     element: <RootLayout />,
+//     errorElement: <Error />,
+//     children: [
+//       { path: "/", element: <Home /> },
+//       { path: "/products", element: <Products /> },
+//       { path: "/products/:productId", element: <ProductDetail /> },
+//     ],
+//   },
+// ]);
+
+// Relative path example
 const router = createBrowserRouter([
-  // RootLayout to wrap as parent and childs approch
   {
     path: "/",
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/products", element: <Products /> },
-      { path: "/products/:productId", element: <ProductDetail /> },
+      // Default route adding index property
+      { index: true, element: <Home /> },
+      { path: "products", element: <Products /> },
+      { path: "products/:productId", element: <ProductDetail /> },
     ],
   },
 ]);

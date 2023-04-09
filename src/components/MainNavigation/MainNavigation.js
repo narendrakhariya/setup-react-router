@@ -9,7 +9,8 @@ const MainNavigation = () => {
         <ul className={classes.list}>
           <li>
             <NavLink
-              to="/"
+              // to="/" /* Absolute path */
+              to="" /* Relative path */
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
@@ -20,7 +21,8 @@ const MainNavigation = () => {
           </li>
           <li>
             <NavLink
-              to="/products"
+              // to="/products"  /* Absolute path */
+              to="products" /* Relative path */
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }

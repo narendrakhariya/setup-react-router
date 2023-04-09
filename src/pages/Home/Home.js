@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const navigateHandler = () => {
-    navigate("/products");
+    navigate("products");
   };
   return (
     <>
@@ -15,8 +15,11 @@ const Home = () => {
         {/* Below approch request the SPA index.html page to server and loads, problem in gloable state get refresh  */}
         {/* Go to<a href="/products"> The list of products</a> */}
 
-        {/* Use link insted */}
-        <Link to="/products"> The list of products</Link>
+        {/* Use link insted anchor*/}
+        {/* <Link to="/products"> The list of products</Link> */}
+
+        {/* Relative path */}
+        <Link to="products"> The list of products</Link>
 
         <p>
           {/* Navigating Programmatically  */}

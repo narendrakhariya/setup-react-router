@@ -23,7 +23,11 @@ const Products = () => {
         {DUMMY_PRODUCTS.map((item) => {
           return (
             <li key={item.id}>
-              <Link to={`/products/${item.id}`}>{item.title}</Link>
+              {/* Absolute path */}
+              {/* <Link to={`/products/${item.id}`}>{item.title}</Link> */}
+
+              {/* Relative path */}
+              <Link to={item.id}>{item.title}</Link>
             </li>
           );
         })}
